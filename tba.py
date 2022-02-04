@@ -7,6 +7,8 @@ import time
 
 import climage
 
+from playsound import playsound
+
 class Game: 
     def typewriter_print(self, str, delay = 0.1):
         for letter in str:
@@ -91,8 +93,9 @@ class World:
         # output = climage.convert('./assets/logo.jpeg', is_unicode=True)
         # print(output)
         escher = climage.convert('./assets/maze.jpeg', is_unicode=True)
+        playsound('./assets/soundtrack/sarah.m4a', False)
         print(escher)
-        # self.scene_one()
+        self.scene_one()
 
     def scene_one(self):
         game_functions.reset_console()
