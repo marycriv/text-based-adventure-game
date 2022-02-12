@@ -8,6 +8,13 @@ import json
 import climage
 from playsound import playsound
 
+json_file_path = './dialogue.json'
+
+with open(json_file_path, 'r') as j:
+     contents = json.loads(j.read())
+
+title_dialogue = contents["chapters"][0]["scenes"]
+
 class Game: 
     def typewriter_print(self, str, delay = 0.1):
         for letter in str:
@@ -51,19 +58,12 @@ class NPC:
 
 goblin = NPC("goblin", "hallway")
 
-
-
-json_file_path = './dialogue.json'
-
-with open(json_file_path, 'r') as j:
-     contents = json.loads(j.read())
-
 class Title:
 
   def title_card(self):
     game_functions.reset_console()
     # playsound('./assets/soundtrack/openingtitlesunderground.m4a', False)
-    game_functions.typewriter_print(contents["chapters"][0]["scenes"]["one"][0])
-    game_functions.typewriter_print(contents["chapters"][0]["scenes"]["one"][1])
+    game_functions.typewriter_print(title_dialogue["one"][0])
+    game_functions.typewriter_print(title_dialogue["one"][1])
     # owl = climage.convert('./assets/2.png', is_unicode=True)
     # print(owl)
