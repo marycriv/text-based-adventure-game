@@ -1,0 +1,18 @@
+{
+    "chapters": [
+        {
+            "chapter": "title",
+            "scenes": {
+                "one": ["LABYRINTH", "THE GAME", "title scene 0, line 3"]
+            }
+        },
+        {
+            "chapter": "one",
+            "scenes": {
+                "one": ["ch1, scene 0, line 1", "ch1, scene 0, line 2", "ch1, scene 0, line 3"],
+                "two": ["ch1, scene 1, line 1", "ch1, scene 1, line 2", "ch1, scene 1, line 3"],
+                "three": ["ch1, scene 2, line 1", "ch1, scene 2, line 2", "ch1, scene 2, line 3"]
+            }
+        }
+    ]
+}

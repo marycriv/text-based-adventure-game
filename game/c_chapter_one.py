@@ -1,54 +1,6 @@
-# a text based adventure game
-
 import sys
-import os
 import random
-import time
-
-import climage
-
-from playsound import playsound
-
-class Game: 
-    def typewriter_print(self, str, delay = 0.1):
-        for letter in str:
-            sys.stdout.write(letter)
-            sys.stdout.flush()
-            time.sleep(delay)
-        print("\n")
-
-    def format_print(self, str, delay = 0):
-        print("\n" + str)
-        time.sleep(delay)
-
-    def reset_console(self):
-        print("\n")
-        os.system('cls||clear')
-
-game_functions = Game()
-
-class player:
-    def __init__(self, location, health, items):
-        self.location = location
-        self.health = health
-        self.items = items
-
-hero = player("", 100, [])
-
-class NPC: 
-    def __init__(self, name, location):
-        self.name = name
-        self.location = location
-
-    def talk(self):
-        game_functions.format_print(f"A {self.name} emerges from the shadows.")
-        game_functions.format_print("'Charging into a goblin's nest! How dare you!'")
-    
-    def move(self):
-        available_locations = ["entry", "cavern", "hallway", "pit"]
-        self.location = random.choice(available_locations)
-
-goblin = NPC("goblin", "hallway")
+from a_game import *
 
 class World:
 
@@ -89,18 +41,9 @@ class World:
                 game_functions.format_print("You are dead!", 2)
                 self.handle_game_over()
 
-    def chapter_one(self):
-        # output = climage.convert('./assets/logo.jpeg', is_unicode=True)
-        # print(output)
-        escher = climage.convert('./assets/maze.jpeg', is_unicode=True)
-        playsound('./assets/soundtrack/sarah.m4a', False)
-        print(escher)
-        self.scene_one()
-
     def scene_one(self):
-        game_functions.reset_console()
         hero.location = "entry"
-        game_functions.format_print("You are in a dark cave. The entry has been sealed by fallen rocks. There is no way out.")
+        game_functions.format_print("Your name is Sarah Williams. You are a teenage girl.")
         self.random_medkit()
         self.handle_goblin()
         print("Ahead you can see a cavern. Will you continue?\n")
@@ -165,8 +108,3 @@ class World:
                 self.use_medkit()
             else: 
                 game_functions.format_print("You feel hopeless.")
-
-
-# chapter one
-new_world = World()
-new_world.chapter_one()
