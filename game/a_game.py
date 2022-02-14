@@ -7,5 +7,5 @@ from c_chapter_one import *
 # new_title = Title()
 # new_title.title_card()
 
-new_world = World()
-new_world.scene_one()
+chapter_one = ChapterOne()
+chapter_one.scene_one()

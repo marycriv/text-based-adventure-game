@@ -10,7 +10,7 @@ with open(json_file_path, 'r') as j:
 
 title_dialogue = contents["chapters"][1]["scenes"]
 
-class World:
+class ChapterOne:
 
     def use_medkit(self):
         if "medkit" in hero.items:
