@@ -31,6 +31,10 @@ class Game:
         print("\n")
         os.system('cls||clear')
 
+    def handle_game_over(self):
+        print("GAME OVER")
+        sys.exit()
+
 game_functions = Game()
 
 class player:

@@ -12,6 +12,9 @@ title_dialogue = contents["chapters"][1]["scenes"]
 
 class ChapterOne:
 
+    def next_chapter(self):
+        print("continuing")
+
     def use_medkit(self):
         if "medkit" in hero.items:
             hero.items.remove("medkit")
@@ -25,10 +28,6 @@ class ChapterOne:
         goblin.move()
         if hero.location == goblin.location:
             goblin.talk()
-
-    def handle_game_over(self):
-        game_functions.typewriter_print("GAME OVER")
-        sys.exit()
 
     def random_medkit(self):
         medkit_find = random.choice([True, False])
@@ -47,7 +46,7 @@ class ChapterOne:
             print(f"\nHealth: {hero.health}")
             if hero.health == 0:
                 game_functions.format_print("You are dead!", 2)
-                self.handle_game_over()
+                game_functions.handle_game_over()
 
     def scene_one(self):
         hero.location = "entry"
@@ -109,7 +108,7 @@ class ChapterOne:
             action = input("\n> ")
             if action == "yes": 
                 game_functions.format_print("You try to climb out, but you slide off of the rocky walls.")
-                self.handle_game_over()
+                self.next_chapter()
             elif action == "no":
                 game_functions.format_print("You sit in utter darkness.") 
             elif action == "m": 
