@@ -10,9 +10,9 @@
             "chapter": "one",
             "scenes": {
                 "one": ["Your name is Sarah Williams. You are a young girl.", "Ahead you can see a cavern. Will you continue?", "Water is dripping from the ceiling.", "You sit in total darkness, wondering if there is a way out."],
-                "two": ["You stumble into a dimly lit cavern.", "You cannot go right or left, but the cave continues ahead. Will you go on?", "You sit down and eat a burrito.", "I do not understand your accent."],
-                "three": ["You are in a wide hallway. It continues on indefinitely.", "There's no turning back now. Will you go on?", "You try to call for help, but no one is there.", "You wonder what time it is."],
-                "four": ["You fall headfirst into an ominous pit.", "Luckily you only landed on your back.", "You can try to climb out. Will you try?", "You try to climb out, but you slide off of the rocky walls.", "You sit in utter darkness.", "You feel hopeless."],
+                "two": ["You stumble into a dimly lit cavern.", "You cannot go right or left, but the cave continues ahead. Will you go on?", "You sit down and eat a burrito.", "Input invalid."],
+                "three": ["You are in a wide hallway. It continues on indefinitely.", "There's no turning back now. Will you go on?", "You try to call for help, but no one is there.", "Input invalid."],
+                "four": ["You fall headfirst into an ominous pit.", "Luckily you only landed on your back.", "You can try to climb out. Will you try?", "You try to climb out, but you slide off of the rocky walls.", "You sit in utter darkness.", "Input invalid."],
                 "options": ["Enter yes or no."]
             }
         },
@@ -21,7 +21,8 @@
             "scenes": {
                 "one": ["ch2, scene 0, line 1", "ch2, scene 0, line 2", "ch2, scene 0, line 3"],
                 "two": ["ch2, scene 1, line 1", "ch2, scene 1, line 2", "ch2, scene 1, line 3"],
-                "three": ["ch2, scene 2, line 1", "ch2, scene 2, line 2", "ch2, scene 2, line 3"]
+                "three": ["ch2, scene 2, line 1", "ch2, scene 2, line 2", "ch2, scene 2, line 3"],
+                "options": ["Enter yes or no."]
             }
         },
         {
@@ -29,7 +30,8 @@
             "scenes": {
                 "one": ["ch3, scene 0, line 1", "ch3, scene 0, line 2", "ch3, scene 0, line 3"],
                 "two": ["ch3, scene 1, line 1", "ch3, scene 1, line 2", "ch3, scene 1, line 3"],
-                "three": ["ch3, scene 2, line 1", "ch3, scene 2, line 2", "ch3, scene 2, line 3"]
+                "three": ["ch3, scene 2, line 1", "ch3, scene 2, line 2", "ch3, scene 2, line 3"],
+                "options": ["Enter yes or no."]
             }
         }
     ]
