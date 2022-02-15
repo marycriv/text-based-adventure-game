@@ -11,8 +11,8 @@ from e_chapter_three import *
 chapter_one = ChapterOne()
 chapter_one.scene_one()
 
-chapter_two = ChapterTwo()
-chapter_two.scene_one()
+# chapter_two = ChapterTwo()
+# chapter_two.scene_one()
 
 # chapter_three = ChapterThree()
 # chapter_three.scene_one()

@@ -31,7 +31,7 @@ class ChapterOne:
 
     def random_medkit(self):
         medkit_find = random.choice([True, False])
-        medkit_find = True # for testing purposes
+        medkit_find = False # for testing purposes
         if medkit_find == True:
             hero.items.append("medkit")
             game_functions.format_print("You found a medkit!", 2)
@@ -39,7 +39,7 @@ class ChapterOne:
 
     def random_bat_attack(self):
         bat_attack = random.choice([True, False])
-        bat_attack = True # for testing purposes
+        bat_attack = False # for testing purposes
         if bat_attack == True:
             game_functions.format_print("You were attacked by a bat", 2)
             hero.health -= random.randint(1,100)
@@ -55,12 +55,13 @@ class ChapterOne:
         self.handle_goblin()
         print("Ahead you can see a cavern. Will you continue?\n")
         print("Enter yes or no.")
-        while True: 
+        action = ""
+        while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
                 self.scene_two()
             elif action == "no":
-                game_functions.format_print("Water is dripping from the ceiling.") 
+                game_functions.format_print("Water is dripping from the ceiling.")
             elif action == "m": 
                 self.use_medkit()
             else: 
