@@ -9,7 +9,7 @@ json_file_path = './dialogue.json'
 with open(json_file_path, 'r') as j:
      contents = json.loads(j.read())
 
-title_dialogue = contents["chapters"][1]["scenes"]
+dialogue = contents["chapters"][1]["scenes"]
 
 class ChapterOne:
 
@@ -54,72 +54,73 @@ class ChapterOne:
 
     def scene_one(self):
         hero.location = "entry"
-        game_functions.format_print("Your name is Sarah Williams. You are a teenage girl.")
+        game_functions.format_print(dialogue["one"][0])
         self.random_medkit()
         self.handle_goblin()
-        print("Ahead you can see a cavern. Will you continue?\n")
-        print("Enter yes or no.")
+        game_functions.format_print(dialogue["one"][1])
+        game_functions.format_print(dialogue["options"][0])
         action = ""
         while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
-                self.scene_one()
+                self.scene_two()
             elif action == "no":
-                game_functions.format_print("Water is dripping from the ceiling.")
+                game_functions.format_print(dialogue["one"][2])
             elif action == "m": 
                 self.use_medkit()
             else: 
-                game_functions.format_print("You sit in total darkness, wondering if there is a way out.")
+                game_functions.format_print(dialogue["one"][3])
 
     def scene_two(self):
         hero.location = "cavern"
         self.random_bat_attack()
         self.handle_goblin()
-        game_functions.format_print("You stumble into a dimly lit cavern.", 2)
-        print("You cannot go right or left, but the cave continues ahead. Will you go on?")
+        game_functions.format_print(dialogue["two"][0])
+        game_functions.format_print(dialogue["two"][1])
+        game_functions.format_print(dialogue["options"][0])
         action = ""
         while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
                 self.scene_three()
             elif action == "no":
-                game_functions.format_print("You sit down and eat a burrito.") 
+                game_functions.format_print(dialogue["two"][2]) 
             elif action == "m": 
                 self.use_medkit()
             else: 
-                game_functions.format_print("I do not understand your accent.")
+                game_functions.format_print(dialogue["two"][3])
 
     def scene_three(self):
         hero.location = "hallway"
-        game_functions.format_print("You are in a wide hallway. It continues on indefinitely.", 2)
+        game_functions.format_print(dialogue["three"][0])
         self.handle_goblin()
-        print("There's no turning back now. Will you go on?")
+        game_functions.format_print(dialogue["three"][1])
         action = ""
         while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
                 self.scene_four()
             elif action == "no":
-                game_functions.format_print("You try to call for help, but no one is there.") 
+                game_functions.format_print(dialogue["three"][2]) 
             elif action == "m": 
                 self.use_medkit()
             else: 
-                game_functions.format_print("You wonder what time it is.")
+                game_functions.format_print(dialogue["three"][3])
 
     def scene_four(self):
         hero.location = "pit"
-        game_functions.format_print("You fall headfirst into an ominous pit.", 2)
-        game_functions.format_print("Luckily you only landed on your back.", 2)
-        print("You can try to climb out. Will you try?")
+        game_functions.format_print(dialogue["four"][0])
+        game_functions.format_print(dialogue["four"][1])
+        game_functions.format_print(dialogue["four"][2])
         action = ""
         while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
-                game_functions.format_print("You try to climb out, but you slide off of the rocky walls.")
+                game_functions.format_print(dialogue["four"][3])
                 self.next_chapter()
             elif action == "no":
-                game_functions.format_print("You sit in utter darkness.") 
+                game_functions.format_print(dialogue["four"][4]) 
             elif action == "m": 
                 self.use_medkit()
             else: 
-                game_functions.format_print("You feel hopeless.")
+                game_functions.format_print(dialogue["four"][5])
