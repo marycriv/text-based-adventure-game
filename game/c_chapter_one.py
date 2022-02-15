@@ -2,6 +2,7 @@ import sys
 import random
 
 from b_title import *
+from d_chapter_two import *
 
 json_file_path = './dialogue.json'
 
@@ -13,7 +14,10 @@ title_dialogue = contents["chapters"][1]["scenes"]
 class ChapterOne:
 
     def next_chapter(self):
-        print("continuing")
+        # game_functions.reset_console()
+        game_functions.format_print("Next chapter function")
+        chapter_two = ChapterTwo()
+        chapter_two.scene_one()
 
     def use_medkit(self):
         if "medkit" in hero.items:
@@ -59,7 +63,7 @@ class ChapterOne:
         while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
-                self.scene_two()
+                self.scene_one()
             elif action == "no":
                 game_functions.format_print("Water is dripping from the ceiling.")
             elif action == "m": 
@@ -73,7 +77,8 @@ class ChapterOne:
         self.handle_goblin()
         game_functions.format_print("You stumble into a dimly lit cavern.", 2)
         print("You cannot go right or left, but the cave continues ahead. Will you go on?")
-        while True: 
+        action = ""
+        while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
                 self.scene_three()
@@ -89,7 +94,8 @@ class ChapterOne:
         game_functions.format_print("You are in a wide hallway. It continues on indefinitely.", 2)
         self.handle_goblin()
         print("There's no turning back now. Will you go on?")
-        while True: 
+        action = ""
+        while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
                 self.scene_four()
@@ -105,7 +111,8 @@ class ChapterOne:
         game_functions.format_print("You fall headfirst into an ominous pit.", 2)
         game_functions.format_print("Luckily you only landed on your back.", 2)
         print("You can try to climb out. Will you try?")
-        while True: 
+        action = ""
+        while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
                 game_functions.format_print("You try to climb out, but you slide off of the rocky walls.")
