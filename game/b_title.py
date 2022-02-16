@@ -71,3 +71,4 @@ class Title:
     game_functions.typewriter_print(title_dialogue["one"][1])
     # owl = climage.convert('./assets/2.png', is_unicode=True)
     # print(owl)
+    game_functions.format_print(title_dialogue["one"][2])

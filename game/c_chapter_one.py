@@ -56,24 +56,26 @@ class ChapterOne:
         hero.location = "gate"
         game_functions.format_print(dialogue["one"][0])
         game_functions.format_print(dialogue["one"][1])
-        game_functions.format_print(dialogue["options"][0])
+        game_functions.format_print(dialogue["one"][2])
+        game_functions.format_print(dialogue["one"][3])
+        game_functions.format_print(dialogue["options"][1])
         action = ""
         while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
                 self.scene_two()
             elif action == "no":
-                game_functions.format_print(dialogue["one"][2])
+                game_functions.format_print(dialogue["one"][4])
             elif action == "m": 
                 self.use_medkit()
             else: 
-                game_functions.format_print(dialogue["one"][3])
+                game_functions.format_print(dialogue["options"][0])
 
     def scene_two(self):
         hero.location = "faerie"
         game_functions.format_print(dialogue["two"][0])
         game_functions.format_print(dialogue["two"][1])
-        game_functions.format_print(dialogue["options"][0])
+        game_functions.format_print(dialogue["options"][1])
         action = ""
         while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
