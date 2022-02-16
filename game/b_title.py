@@ -24,7 +24,7 @@ class Game:
         print("\n")
 
     def format_print(self, str, delay = 0):
-        print("\n" + str)
+        print("\n" + str + "\n")
         time.sleep(delay)
 
     def reset_console(self):

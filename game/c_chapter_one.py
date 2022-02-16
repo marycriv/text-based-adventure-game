@@ -53,10 +53,8 @@ class ChapterOne:
                 game_functions.handle_game_over()
 
     def scene_one(self):
-        hero.location = "entry"
+        hero.location = "gate"
         game_functions.format_print(dialogue["one"][0])
-        self.random_medkit()
-        self.handle_goblin()
         game_functions.format_print(dialogue["one"][1])
         game_functions.format_print(dialogue["options"][0])
         action = ""
@@ -72,9 +70,7 @@ class ChapterOne:
                 game_functions.format_print(dialogue["one"][3])
 
     def scene_two(self):
-        hero.location = "cavern"
-        self.random_bat_attack()
-        self.handle_goblin()
+        hero.location = "faerie"
         game_functions.format_print(dialogue["two"][0])
         game_functions.format_print(dialogue["two"][1])
         game_functions.format_print(dialogue["options"][0])
@@ -91,9 +87,8 @@ class ChapterOne:
                 game_functions.format_print(dialogue["two"][3])
 
     def scene_three(self):
-        hero.location = "hallway"
+        hero.location = "corridor"
         game_functions.format_print(dialogue["three"][0])
-        self.handle_goblin()
         game_functions.format_print(dialogue["three"][1])
         action = ""
         while action != "yes" or action != "no" or action != "m": 
@@ -108,7 +103,7 @@ class ChapterOne:
                 game_functions.format_print(dialogue["three"][3])
 
     def scene_four(self):
-        hero.location = "pit"
+        hero.location = "worm"
         game_functions.format_print(dialogue["four"][0])
         game_functions.format_print(dialogue["four"][1])
         game_functions.format_print(dialogue["four"][2])
