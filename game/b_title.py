@@ -45,7 +45,7 @@ class player:
         self.health = health
         self.items = items
 
-hero = player("Sarah", "Williams", "", 100, [])
+hero = player("Sarah", "Williams", "", 100, ["ring", "lipstick"])
 
 class NPC: 
     def __init__(self, name, location):

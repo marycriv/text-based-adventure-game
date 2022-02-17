@@ -28,6 +28,13 @@ class ChapterOne:
         else: 
             game_functions.format_print("You don't have a medkit.")
 
+    def give_ring(self):
+        if "ring" in hero.items:
+            hero.items.remove("ring")
+            game_functions.format_print("You give the goblin your ring.")
+        else: 
+            game_functions.format_print("You don't have a ring.")
+
     def handle_goblin(self): 
         goblin.move()
         if hero.location == goblin.location:
@@ -63,6 +70,7 @@ class ChapterOne:
         while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
             if action == "yes": 
+                self.give_ring()
                 self.scene_two()
             elif action == "no":
                 game_functions.format_print(dialogue["one"][4])
