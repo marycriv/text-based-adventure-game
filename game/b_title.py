@@ -57,7 +57,7 @@ class NPC:
         game_functions.format_print("'Charging into a goblin's nest! How dare you!'")
     
     def move(self):
-        available_locations = ["entry", "cavern", "hallway", "pit"]
+        available_locations = ["gate", "faerie", "corridor", "worm"]
         self.location = random.choice(available_locations)
 
 goblin = NPC("goblin", "hallway")
