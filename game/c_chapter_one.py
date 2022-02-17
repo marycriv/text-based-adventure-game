@@ -86,7 +86,7 @@ class ChapterOne:
             elif action == "m": 
                 self.use_medkit()
             else: 
-                game_functions.format_print(dialogue["two"][3])
+                game_functions.format_print(dialogue["options"][1])
 
     def scene_three(self):
         hero.location = "corridor"
@@ -102,7 +102,7 @@ class ChapterOne:
             elif action == "m": 
                 self.use_medkit()
             else: 
-                game_functions.format_print(dialogue["three"][3])
+                game_functions.format_print(dialogue["options"][1])
 
     def scene_four(self):
         hero.location = "worm"
@@ -120,4 +120,4 @@ class ChapterOne:
             elif action == "m": 
                 self.use_medkit()
             else: 
-                game_functions.format_print(dialogue["four"][5])
+                game_functions.format_print(dialogue["options"][1])

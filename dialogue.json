@@ -10,9 +10,9 @@
             "chapter": "one",
             "scenes": {
                 "one": ["You notice a short man ahead of you on the path and walk up to him.", "'Excuse me. I need to get into this Labyrinth. Do you know the way?' You ask.", "When he turns to face you, you realize he's not a man at all, but a small goblin of some kind.", "''Spose I do help you. Will I be gettin' anything in return?' He replies.", "He narrows his eyes at you. 'Well then I guess you won't be makin' your way in any time soon.'"],
-                "two": ["You stumble into a dimly lit cavern.", "You cannot go right or left, but the cave continues ahead. Will you go on?", "You sit down and eat a burrito.", "Input invalid."],
-                "three": ["You are in a wide hallway. It continues on indefinitely.", "There's no turning back now. Will you go on?", "You try to call for help, but no one is there.", "Input invalid."],
-                "four": ["You fall headfirst into an ominous pit.", "Luckily you only landed on your back.", "You can try to climb out. Will you try?", "You try to climb out, but you slide off of the rocky walls.", "You sit in utter darkness.", "Input invalid."],
+                "two": ["You stumble into a dimly lit cavern.", "You cannot go right or left, but the cave continues ahead. Will you go on?", "You sit down and eat a burrito."],
+                "three": ["You are in a wide hallway. It continues on indefinitely.", "There's no turning back now. Will you go on?", "You try to call for help, but no one is there."],
+                "four": ["You fall headfirst into an ominous pit.", "Luckily you only landed on your back.", "You can try to climb out. Will you try?", "You try to climb out, but you slide off of the rocky walls.", "You sit in utter darkness."],
                 "options": ["Invalid input.", "Enter yes or no."]
             }
         },
