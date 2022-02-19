@@ -35,6 +35,7 @@ class ChapterOne:
         else: 
             game_functions.format_print("You don't have a ring.")
 
+    # move to chapter two
     def handle_goblin(self): 
         goblin.move()
         if hero.location == goblin.location:
@@ -66,6 +67,7 @@ class ChapterOne:
         game_functions.format_print(dialogue["one"][2])
         game_functions.format_print(dialogue["one"][3])
         game_functions.format_print(dialogue["options"][1])
+        # action = input("\n> ")
         action = ""
         while action != "yes" or action != "no" or action != "m": 
             action = input("\n> ")
